@@ -26,6 +26,7 @@ export const Category = (): JSX.Element => {
           </div>
         </div>
         <Link href="/Booking">
+        <div className="shadow-lg">
         <div className={styles.nissan}>
           <div className={styles.overlap}>
             <div className={styles["text-wrapper-2"]}>Price : $180</div>
@@ -40,6 +41,7 @@ export const Category = (): JSX.Element => {
               <img className={styles.img} alt="Image" src="/img/Nissan Sentra SR.jpg" />
             </div>
           </div>
+        </div>
         </div>
         </Link>
 
@@ -122,6 +124,7 @@ export const Category = (): JSX.Element => {
 
 
         <Link href="/Booking">
+
         <div className={styles.r}>
           <div className={styles.overlap}>
             <div className={styles["text-wrapper-2"]}>Price : $200</div>

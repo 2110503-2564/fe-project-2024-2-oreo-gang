@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./booking.module.css"; 
 import Link from 'next/link'
+import LocationDate from "./locationDate";
 
 export const BookingPage = (): JSX.Element => {
   return (
@@ -15,11 +16,28 @@ export const BookingPage = (): JSX.Element => {
 
             <div className={styles["booking-M"]}>
               <div className={styles["text-wrapper"]}>Pickup Date :</div>
+              
+              
+            </div>
+
+            <div className={styles["booking-x"]}>
+            <LocationDate/>
             </div>
 
 
             <div className={styles["booking-N"]}>
               <div className={styles["text-wrapper"]}>Return Date :</div>
+              
+            </div>
+
+            <div className={styles["booking-D"]}>
+            <LocationDate/>
+            </div>
+
+            <div className={styles["booking-B"]}>
+            <button className="block rounded-md bg-sky hover:bg-green px-3 py-2 text-black shadow-sm">
+              Booking
+            </button>
             </div>
           
 
