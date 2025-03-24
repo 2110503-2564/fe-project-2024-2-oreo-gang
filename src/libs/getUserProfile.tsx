@@ -1,5 +1,5 @@
 export default async function getUserProfile( token:String ){
-    const response = await fetch("https://a08-venue-explorer-backend-3.vercel.app/api/v1/auth/me",{
+    const response = await fetch("https://proj-oreo-backend.vercel.app/api/v1/me",{
         method: "GET",
         headers: {
             authorization : `Bearer ${token}`
