@@ -5,7 +5,6 @@ export default function Views() {
   return (
     <main >
       <View/>
-      <OreoFooter/>
     </main>
   );
 }

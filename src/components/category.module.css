@@ -14,16 +14,6 @@
   width: 1440px;
 }
 
-.category .end {
-  height: 96px;
-  left: -1px;
-  position: absolute;
-  top: 1242px;
-  left: 0;
-  right: 0; 
-  width: 100%; 
-}
-
 .category .group {
   height: 96px;
   width: 1443px;

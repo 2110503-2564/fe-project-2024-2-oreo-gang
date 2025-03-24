@@ -6,25 +6,6 @@ export const Category = (): JSX.Element => {
   return (
     <div className={styles.category}>
       <div className={styles.div}>
-        <div className={styles.end}>
-          <div className={styles.group}>
-            <div className={styles["overlap-group"]}>
-              <div className={styles.rectangle} />
-
-              <div className={styles.frame}>
-                <div className={styles["frame-2"]}>
-                  <div className={styles["text-wrapper"]}>OREO.CO</div>
-
-                  <div className={styles["frame-3"]} />
-                </div>
-              </div>
-
-              <p className={styles["element-all-rights"]}>
-                OREO.co © 2000-2023, All Rights Reserved
-              </p>
-            </div>
-          </div>
-        </div>
         <Link href="/Booking">
         <div className="shadow-lg">
         <div className={styles.nissan}>

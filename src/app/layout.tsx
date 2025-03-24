@@ -6,6 +6,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "./api/auth/[...nextauth]/authOptions";
 import NextAuthProvider from "@/providers/NextAuthProvider";
 import ReduxProvider from "@/redux/ReduxProvider";
+import OreoFooter from "@/components/OreoFooter";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -30,6 +31,7 @@ export default async function RootLayout({
          <NextAuthProvider session={session}>
           <TopMenu/>
            {children}
+           <OreoFooter/>
          </NextAuthProvider>
         </ReduxProvider>
       </body>
