@@ -1,0 +1,283 @@
+.booking {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .booking .div {
+    background-color: #ffffff;
+    height: 888px;
+    overflow: hidden;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .booking .bg {
+    background-color: #f2f0f1;
+    height: 888px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .booking .carbanner {
+    height: 554px;
+    left: 602px;
+    object-fit: cover;
+    position: absolute;
+    top: 138px;
+    width: 839px;
+  }
+  
+  .booking .CARRENTAL-OREO {
+    color: #000000;
+    font-family: "Archivo Black-Regular", Helvetica, sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    height: 108px;
+    left: 101px;
+    letter-spacing: 0;
+    line-height: 64px;
+    position: absolute;
+    top: 160px;
+  }
+  
+  .booking .booking-M {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    
+    justify-content: center;
+    left: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: 130px;
+    
+  }
+  .booking .booking-N {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    
+    justify-content: center;
+    left: 108px;
+    overflow: hidden;
+    position: absolute;
+    top: 300px;
+    
+  }
+
+  .booking .booking-text{
+    display: flex;
+  width: 404px;
+  height: 80px;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  }
+  
+  .booking .text-wrapper {
+    color: #000000;
+    font-family: "Inter-Medium", Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -0.50px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .booking .group {
+    height: 96px;
+    left: 0;
+    position: absolute;
+    top: 686px;
+    width: 1441px;
+  }
+  
+  .booking .overlap-group-wrapper {
+    height: 96px;
+    width: 1443px;
+  }
+  
+  .booking .overlap-group {
+    height: 96px;
+    position: relative;
+    width: 1441px;
+  }
+  
+  .booking .rectangle {
+    background-color: #000000;
+    height: 94px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1441px;
+  }
+  
+  .booking .line {
+    height: 1px;
+    left: 101px;
+    object-fit: cover;
+    position: absolute;
+    top: 59px;
+    width: 1240px;
+  }
+  
+  .booking .frame {
+    align-items: flex-start;
+    display: flex;
+    gap: 207px;
+    justify-content: space-around;
+    left: 101px;
+    position: absolute;
+    top: 15px;
+    width: 1240px;
+  }
+  
+  .booking .frame-2 {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+  }
+  
+  .booking .text-wrapper-2 {
+    color: #ffffff;
+    font-family: "Archivo Black-Regular", Helvetica, sans-serif;
+    font-size: 33.5px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .booking .frame-3 {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .booking .element-all-rights {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    left: 82px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: right;
+    top: 66px;
+    white-space: nowrap;
+    width: 305px;
+  }
+  
+  .booking .bar {
+    height: 109px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1444px;
+  }
+  
+  .booking .overlap-group-2 {
+    background-color: #ffffff;
+    height: 109px;
+    position: relative;
+    width: 1440px;
+  }
+  
+  .booking .logo {
+    height: 73px;
+    left: 72px;
+    object-fit: cover;
+    position: absolute;
+    top: 21px;
+    width: 205px;
+  }
+  
+  .booking .text-wrapper-3 {
+    color: #000000;
+    font-family: "Poppins-Bold", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    left: 1211px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 58px;
+  }
+  
+  .booking .text-wrapper-4 {
+    color: #000000;
+    font-family: "Poppins-Bold", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    left: 1308px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 58px;
+  }
+  
+  @media (max-width: 768px) {
+    .booking .frame {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .booking .carbanner {
+      width: 100%;
+      height: auto;
+      top: 80px;
+      left: 0;
+    }
+  
+    .booking .CARRENTAL-OREO {
+      font-size: 48px;
+    }
+  
+    .booking .logo {
+      width: 150px;
+      height: 50px;
+    }
+  
+    .booking .text-wrapper-2 {
+      font-size: 24px;
+    }
+  }
+
+
+  
+  .booking .text-wrapperr {
+    color: #000000;
+    font-family: "Poppins-Medium", Helvetica;
+    font-size: 32px;
+    font-weight: 500;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: fixed;
+    top: 0;
+  }
+
+
+
+  .booking.pick-date{
+  color: #000;
+  font-family: Poppins;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  }

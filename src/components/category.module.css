@@ -1,0 +1,313 @@
+.category {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+
+.category .div {
+  background-color: #ffffff;
+  height: 1338px;
+  overflow: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.category .end {
+  height: 96px;
+  left: -1px;
+  position: absolute;
+  top: 1242px;
+  left: 0;
+  right: 0; 
+  width: 100%; 
+}
+
+.category .group {
+  height: 96px;
+  width: 1443px;
+}
+
+.category .overlap-group {
+  height: 96px;
+  position: relative;
+  width: 1441px;
+}
+
+.category .rectangle {
+  background-color: #000000;
+  height: 94px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1441px;
+}
+
+.category .line {
+  height: 1px;
+  left: 101px;
+  object-fit: cover;
+  position: absolute;
+  top: 59px;
+  width: 1240px;
+}
+
+.category .frame {
+  align-items: flex-start;
+  display: flex;
+  gap: 207px;
+  justify-content: space-around;
+  left: 101px;
+  position: absolute;
+  top: 15px;
+  width: 1240px;
+}
+
+.category .frame-2 {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 35px;
+  position: relative;
+}
+
+.category .text-wrapper {
+  color: #ffffff;
+  font-family: "Archivo Black-Regular", Helvetica;
+  font-size: 33.5px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.category .frame-3 {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.category .element-all-rights {
+  color: #ffffff;
+  font-family: "Inter-Regular", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 82px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 66px;
+  white-space: nowrap;
+  width: 305px;
+}
+
+.category .nissan {
+  height: 417px;
+  left: 1023px;
+  position: absolute;
+  top: 671px;
+  width: 325px;
+}
+
+.category .overlap {
+  background-color: #f3f3f4;
+  border-radius: 10px;
+  height: 417px;
+  position: relative;
+  width: 319px;
+}
+
+.category .text-wrapper-2 {
+  color: #000000;
+  font-family: "Jersey 25-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 23px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 374px;
+  width: 139px;
+}
+
+.category .text-wrapper-3 {
+  color: #000000;
+  font-family: "Jersey 25-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 15px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 357px;
+  white-space: nowrap;
+}
+
+.category .text-wrapper-4 {
+  color: #000000;
+  font-family: "Jersey 25-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 15px;
+  left: 23px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 337px;
+  white-space: nowrap;
+}
+
+.category .img-wrapper {
+  background-color: #f0eeed;
+  border-radius: 10px 10px 0px 0px;
+  height: 314px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 319px;
+}
+
+.category .img {
+  height: 314px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 319px;
+}
+
+.category .BMW-series {
+  height: 417px;
+  left: 100px;
+  position: absolute;
+  top: 671px;
+  width: 325px;
+}
+
+.category .text-wrapper-5 {
+  color: #000000;
+  font-family: "Jersey 25-Regular", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  height: 23px;
+  left: 24px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 374px;
+  width: 139px;
+}
+
+.category .benz {
+  height: 417px;
+  left: 561px;
+  position: absolute;
+  top: 671px;
+  width: 325px;
+}
+
+.category .porsche {
+  height: 417px;
+  left: 561px;
+  position: absolute;
+  top: 195px;
+  width: 325px;
+}
+
+.category .audi {
+  height: 417px;
+  left: 100px;
+  position: absolute;
+  top: 195px;
+  width: 325px;
+}
+
+.category .r {
+  height: 417px;
+  left: 1021px;
+  position: absolute;
+  top: 195px;
+  width: 325px;
+}
+
+.category .bar {
+  height: 134px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.category .overlap-2 {
+  height: 120px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.category .rectangle-2 {
+  background-color: #ffffff;
+  height: 109px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1440px;
+}
+
+.category .frame-wrapper {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: 14px;
+  left: 1290px;
+  position: absolute;
+  top: 72px;
+}
+
+.category .frame-4 {
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.category .icon-park-outline {
+  height: 24px;
+  left: 1240px;
+  position: absolute;
+  top: 72px;
+  width: 24px;
+}
+
+.category .group-2 {
+  height: 20px;
+  left: 1px;
+  position: absolute;
+  top: 2px;
+  width: 22px;
+}
+
+.category .logo {
+  height: 73px;
+  left: 121px;
+  object-fit: cover;
+  position: absolute;
+  top: 47px;
+  width: 205px;
+}
+
+.category .line-2 {
+  height: 1px;
+  left: 100px;
+  object-fit: cover;
+  position: absolute;
+  top: 133px;
+  width: 1240px;
+}

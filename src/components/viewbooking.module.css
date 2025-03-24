@@ -1,0 +1,144 @@
+.view {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .view .overlap-wrapper {
+    background-color: #ffffff;
+    height: 892px;
+    overflow: hidden;
+    width: 1440px;
+  }
+  
+  .view .overlap {
+    height: 760px;
+    left: -1px;
+    position: relative;
+    top: 134px;
+    width: 1441px;
+  }
+  
+  .view .bg {
+    background-color: #f2f0f1;
+    height: 663px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 1440px;
+  }
+  
+  .view .profile-banner {
+    background-color: #ffffff;
+    height: 667px;
+    left: 825px;
+    position: absolute;
+    top: 0;
+    width: 616px;
+  }
+  
+  .view .image {
+    height: 667px;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    width: 616px;
+  }
+  
+  .view .end {
+    height: 96px;
+    left: 0;
+    position: absolute;
+    top: 664px;
+    width: 1441px;
+  }
+  
+  .view .group {
+    height: 96px;
+    width: 1443px;
+  }
+  
+  .view .overlap-group {
+    height: 96px;
+    position: relative;
+    width: 1441px;
+  }
+  
+  .view .rectangle {
+    background-color: #000000;
+    height: 94px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1441px;
+  }
+  
+  .view .frame {
+    align-items: flex-start;
+    display: flex;
+    gap: 207px;
+    justify-content: space-around;
+    left: 101px;
+    position: absolute;
+    top: 15px;
+    width: 1240px;
+  }
+  
+  .view .div {
+    align-items: flex-start;
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 35px;
+    position: relative;
+  }
+  
+  .view .text-wrapper {
+    color: #ffffff;
+    font-family: "Archivo Black-Regular", Helvetica;
+    font-size: 33.5px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .view .frame-2 {
+    flex: 0 0 auto;
+    position: relative;
+  }
+  
+  .view .element-all-rights {
+    color: #ffffff;
+    font-family: "Inter-Regular", Helvetica;
+    font-size: 14px;
+    font-weight: 400;
+    left: 82px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: right;
+    top: 66px;
+    white-space: nowrap;
+    width: 305px;
+  }
+  
+  .view .text-wrapper-2 {
+    color: #000000;
+    font-family: "Archivo Black-Regular", Helvetica;
+    font-size: 36px;
+    font-weight: 400;
+    height: 25px;
+    left: 86px;
+    letter-spacing: 0;
+    line-height: 64px;
+    position: absolute;
+    top: 75px;
+    width: 565px;
+  }
