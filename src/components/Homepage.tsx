@@ -16,18 +16,19 @@ export default function Homepage() {
             src="/img/carbanner.png"
           />
 
-          <div className={styles["CARRENTAL-OREO"]}>
-            CARRENTAL
-            <br />
-            OREO
-          </div>
-
-          <Link href="/Category">
-            <div className={styles.booking}>
-              <div className={styles["text-wrapper"]}>Booking Now</div>
+          <div className="mx-20 mt-20 px-20 py-20" style={{position:"absolute"}}>
+            <div className={styles["CARRENTAL-OREO"]}>
+              CARRENTAL
+              <br/>
+              OREO
             </div>
-          </Link>
 
+            <Link href="/Category">
+              <div className={styles.booking}>
+                <div className={styles["text-wrapper"]}>Booking Now</div>
+              </div>
+            </Link>
+          </div>
 
         </div>
       </div>
