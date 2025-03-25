@@ -1,9 +1,15 @@
-import React from "react";
+"use client"
 
+import React from "react";
 import styles from "./homepage.module.css";
 import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 export default function Homepage() {
+
+  const {data:session} = useSession();
+  console.log(session)
+
   return (
     <div className={styles.homepage}>
       <div className={styles.div}>

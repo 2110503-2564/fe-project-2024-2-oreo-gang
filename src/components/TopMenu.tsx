@@ -9,7 +9,7 @@ import { authOptions } from '@/app/api/auth/[...nextauth]/authOptions';
 export default async function TopMenu (){
 
     const session = await getServerSession(authOptions)
-
+    if(session)console.log(session.user);
 
 
     return (
