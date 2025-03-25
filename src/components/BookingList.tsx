@@ -1,38 +1,44 @@
-"use client";
-import { useAppSelector } from "@/redux/store";
-import { removeBooking } from "@/redux/features/bookSlice";
-import { AppDispatch } from "@/redux/store";
-import { useDispatch } from "react-redux";
+'use server'
 
-export default function BookingList() {
-  const bookItems = useAppSelector((state) => state.bookSlice.bookItems);
-  const dispatch = useDispatch<AppDispatch>();
-  return (
-    <>
-      {bookItems.length == 0
-        ? "No Venue Booking"
-        : bookItems.map((bookItem) => (
-            <div
-              className="bg-slate-200 rounded px-5 mx-5 py-2 my-2"
-              key={bookItem.venue}
-            >
-              <div className="text-md">
-                Name-LastName: {bookItem.nameLastname}
-              </div>
-              <div className="text-md">Tel: {bookItem.tel}</div>
-              <div className="text-md">Venue: {bookItem.venue}</div>
-              <div className="text-md">Booking Date: {bookItem.bookDate}</div>
-              <button
-                className="bg-white text-cyan-600 border border-cyan-600 font-semibold py-2 px-2 m-10 rounded z-30 absolute bottom-0 right-0
-                hover:bg-cyan-600 hover:text-white hover:border-transparent"
-                onClick={(e) => {
-                    dispatch(removeBooking(bookItem))
-                }}
-              >
-                Remove Booking
-              </button>
+import { useSession } from "next-auth/react"
+import getCarBookings from "@/libs/getCarBookings";
+import { getServerSession } from "next-auth"
+import { authOptions } from "@/app/api/auth/[...nextauth]/authOptions";
+import CarCardHorizontal from "./CarCardHorziontal";
+
+export default async function BookingList(){
+    const serverSession = await getServerSession(authOptions);
+    const token = serverSession?.user.token;
+    if(token){
+        console.log(serverSession)
+        const carBookingListJson = await getCarBookings(token);
+        const carBookingListJsonReady:CarBookingJson = carBookingListJson.data;
+
+        console.log(carBookingListJsonReady);
+        
+
+//<CarCardHorizontal model="Bloodfiend v2" provider="DonQuixoteCars" price="100" imageURL="https://drive.google.com/uc?id=1PIdnf8bouy3KaQLeM62r1Zc-mQY9Z0On" carId="123"/>
+
+        return(
+            <div className="px-5 py-5 space-y-5">
+            {
+                carBookingListJson.data.length==0?
+                <div className="my-20 text-3xl font-bold">
+                No Cars Booked.
+                </div>
+                :
+                carBookingListJson.data.map( (carBookingItem:CarBookingItem) => (
+                    <CarCardHorizontal model={carBookingItem.provider.car.model} provider={carBookingItem.provider.name} price={carBookingItem.provider.car.pricePerDay} imageURL={carBookingItem.provider.car.imageURL} carId={carBookingItem._id} 
+                    bookDate={carBookingItem.pickupDate} returnDate={carBookingItem.returnDate} token={token}/>
+                ))
+            }
+            
             </div>
-          ))}
-    </>
-  );
+        )
+    }
+    return(
+        <div className="my-20 text-3xl font-bold">
+            You are Not Logged In.
+        </div>
+    )
 }

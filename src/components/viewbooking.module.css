@@ -8,7 +8,7 @@
   
 .image {
     object-fit:cover;
-    position: absolute;
+    position: fixed;
     right: 0;
     bottom: 10vh;
     height: 90%;

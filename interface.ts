@@ -1,32 +1,16 @@
-interface VenueItem {
+
+  interface CarBookingJson {
+    success : boolean,
+    count : number,
+    data : CarBookingItem[]
+  }
+
+  interface CarBookingItem{
     _id: string,
-    name: string,
-    address: string,
-    district: string,
-    province: string,
-    postalcode: string,
-    tel: string,
-    picture: string,
-    dailyrate: number,
-    __v: number,
-    id: string
-  }
-  
-  interface VenueJson {
-    success: boolean,
-    count: number,
-    pagination: Object,
-    data: VenueItem[]
-  }
-
-  interface BookingItem {
-    nameLastname: string;
-    tel: string;
-    venue: string;
-    bookDate: string;
-  }
-
-  interface BookingJson {
+    user: User,
+    provider: ProviderItem,
+    pickupDate: string,
+    returnDate: string,
 
   }
 
@@ -50,10 +34,16 @@ interface VenueItem {
   interface ProviderJson {
     success : boolean,
     count : number,
-    data : ProviderItem[]
+    data : ProviderItem[],
+  }
+
+  interface ProviderOneJson {
+    success : boolean,
+    data: ProviderItem
   }
 
   interface User {
+    _id: string,
     name : string,
     email: string,
     role: string,

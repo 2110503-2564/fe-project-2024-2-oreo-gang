@@ -6,15 +6,19 @@ export default async function userRegister(
 ) {
   const response = await fetch(
     "https://proj-oreo-backend.vercel.app/api/v1/auth/register",
+
     {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         name: userName,
         email: userEmail,
         password: userPassword,
         phone: userPhone,
         role: "user",
-      })
+      }),
     }
   );
 

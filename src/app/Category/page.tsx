@@ -11,7 +11,7 @@ export default function Category() {
 
   return (
     <main >
-      <Suspense fallback={<p>Loading... <LinearProgress/></p>}>
+      <Suspense fallback={<div className="my-10 flex width-[50%] justify-center"><p>Loading... <LinearProgress/></p></div>}>
         <CategoryComponent ProviderJson={providers}/>
       </Suspense>
       <OreoFooter/>

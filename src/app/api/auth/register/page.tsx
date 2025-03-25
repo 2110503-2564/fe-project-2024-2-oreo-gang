@@ -68,7 +68,10 @@ export default function Booking() {
         console.log(registerInfo)
         try{
           const registeredUser = await userRegister(userName.current ,  userEmail.current, userPass.current, userPhone.current);
+          if(registeredUser){
           console.log(registeredUser)
+          alert("registered successfully")
+          }
         }catch(Error){
           alert(Error);
         }

@@ -1,0 +1,20 @@
+.carCard{
+    width:50vw;
+    height:25vh;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.2);
+    border-radius: 25px;
+}
+
+.carImage{
+    object-fit: cover;
+    border-radius: 25px 0 0 25px ;
+}
+
+.carText{
+    font-weight: 500;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    letter-spacing: 1px;
+}

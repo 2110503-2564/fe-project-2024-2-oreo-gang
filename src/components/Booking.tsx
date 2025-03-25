@@ -1,67 +1,65 @@
-import React from "react";
-import styles from "./booking.module.css"; 
-import Link from 'next/link'
-import LocationDate from "./locationDate";
+'use client'
 
-export const BookingPage = (): JSX.Element => {
+import React from "react";
+import styles from "./booking.module.css";
+import Link from "next/link";
+import LocationDate from "./locationDate";
+import dayjs, { Dayjs } from "dayjs";
+import { useRef } from "react";
+import { useSession } from "next-auth/react";
+
+export default function BookingPage({providerId}:{providerId:string}){
+  
+  const makeBooking = () => {
+
+    }
+
+  
+  const {data:session} = useSession();
+  const userId = session?.user._id;
+  const pid = providerId;
+  const pickUpDate = useRef<null|Dayjs>(null);
+  const returnDate = useRef<null|Dayjs>(null);
+
+  const handlePickup = (value:Dayjs) => {
+    pickUpDate.current = value;
+    console.log(pickUpDate.current)
+  }
+
+  const handleReturn = (value:Dayjs) => {
+    returnDate.current = value;
+    console.log(returnDate)
+  }
+
+
+
   return (
     <div className={styles.booking}>
-      <div className={styles.div}>
-        <div className={styles.overlap}>
-          <div className={styles.bg} />
+      <div className="flex flex-row justify-around my-20 mx-20 px-20 py-20">
 
-          <img className={styles.carbanner} alt="Carbanner" src="/img/carbanner.png" />
-
-          
-
-            <div className={styles["booking-M"]}>
-              <div className={styles["text-wrapper"]}>Pickup Date :</div>
-              
-              
-            </div>
-
-            <div className={styles["booking-x"]}>
-            <LocationDate/>
-            </div>
-
-
-            <div className={styles["booking-N"]}>
-              <div className={styles["text-wrapper"]}>Return Date :</div>
-              
-            </div>
-
-            <div className={styles["booking-D"]}>
-            <LocationDate/>
-            </div>
-
-            <div className={styles["booking-B"]}>
-            <button className="block rounded-md bg-sky hover:bg-green px-3 py-2 text-black shadow-sm">
-              Booking
-            </button>
-            </div>
-          
-
-          <div className={styles.group}>
-            <div className={styles["overlap-group-wrapper"]}>
-              <div className={styles["overlap-group"]}>
-                <div className={styles.rectangle} />
-
-                <div className={styles.frame}>
-                  <div className={styles["frame-2"]}>
-                    <div className={styles["text-wrapper-2"]}>OREO.CO</div>
-
-                    <div className={styles["frame-3"]} />
-                  </div>
-                </div>
-
-                <p className={styles["element-all-rights"]}>
-                  OREO.co © 2025, All Rights Reserved
-                </p>
-              </div>
-            </div>
+        <div className="w-[30%]">
+          <div className="px-10 py-5 space-y-2">
+            <div className={styles.bookingDatePicker}>Pickup Date :</div>
+            <LocationDate onDateChange={handlePickup}/>
           </div>
+          <div className="px-10 py-5 space-y-2">
+            <div className={styles.bookingDatePicker}>Return Date :</div>
+            <LocationDate onDateChange={handleReturn} />
+          </div>
+          <div className="px-10 mx-3 py-10 space-y-4">
+          <button className="bg-white text-black-600 border text-3xl border-black border-800 font-semibold rounded hover:bg-black hover:text-white hover:border-transparent px-20 py-5">
+            BOOK
+          </button>
+          </div>
+
         </div>
+
+        <img
+          className={styles.carBanner}
+          alt="Carbanner"
+          src="/img/carbanner.png"
+        />
       </div>
     </div>
-  );
-};
+  )
+}
