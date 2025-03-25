@@ -34,6 +34,7 @@ export default function BookingPage({providerId}:{providerId:string}){
 
 
   return (
+    session?
     <div className={styles.booking}>
       <div className="flex flex-row justify-around my-20 mx-20 px-20 py-20">
 
@@ -60,6 +61,15 @@ export default function BookingPage({providerId}:{providerId:string}){
           src="/img/carbanner.png"
         />
       </div>
+    </div>
+    :
+    <div className={styles.booking}>
+      <div className="flex flex-row justify-center mx-20 my-20">
+        <div className="text-3xl text-black">You Are Not Logged In</div>
+      </div>
+      <div className="flex flex-row justify-center mx-20 my-20">
+      <div className="text-3xl text-black">Please Login to Book Cars</div>
+    </div>
     </div>
   )
 }

@@ -1,25 +1,26 @@
-'use client'
 import styles from "@/components/carcard.module.css";
-import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function CarCard({
+export default function CarCardCustomUpdate({
   model,
   provider,
   price,
   imageURL,
   carId,
+  pickUpDate,
+  returnDate,
 }: {
   model: string;
   provider: string;
   price: string;
   imageURL: string;
   carId: string;
+  pickUpDate:string;
+  returnDate:string;
 }) {
-  const {data:session} = useSession();
   return (
-    <div className={styles.carCard}>
+    <div className={styles.carCardUpdate}>
       <div className="w-full h-[70%] relative">
         <Image
           src={imageURL}
@@ -29,20 +30,15 @@ export default function CarCard({
         />
       </div>
 
-      <div className="flex flex-row w-full h-[30%] justify-around px-5 py-5">
-        <div className="w-[60%] h-full">
+      <div className="flex flex-row w-full h-[30%] justify-around px-5 py-2">
+        <div className="w-[100%] h-full">
           <div className={styles.carCardText}>
             <div>Model : {model}</div>
             <div>Provider : {provider}</div>
             <div>PricePerDay : {price}THB</div>
+            <div>Current Pick Up Date : {pickUpDate}</div>
+            <div>Current Return Date : {returnDate}</div>
           </div>
-        </div>
-        <div className="w-[40%] h-full">
-        <Link href={`/booking/${carId}`}>
-          <button className="bg-white text-black-600 border border-black border-800 font-semibold rounded hover:bg-black hover:text-white hover:border-transparent mx-10 my-10 px-8 py-5">
-            BOOK
-          </button>
-        </Link>
         </div>
       </div>
     </div>

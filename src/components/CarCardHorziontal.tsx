@@ -12,18 +12,20 @@ export default function CarCardHorizontal({
   provider,
   price,
   imageURL,
-  carId,
+  bookingId,
   bookDate,
   returnDate,
+  userName,
   token
 }: {
   model: string;
   provider: string;
   price: string;
   imageURL: string;
-  carId: string;
+  bookingId: string;
   bookDate: string;
   returnDate: string;
+  userName:string;
   token: string
 }) {
 
@@ -34,6 +36,7 @@ export default function CarCardHorizontal({
         try{
         const deleteResponse = await deleteCarBooking(token, bookingId);
         alert("Deleted Booking Successfully")
+        router.refresh()
         }catch(err){
             alert(err)
         }
@@ -47,7 +50,8 @@ export default function CarCardHorizontal({
                   <Image src={imageURL} alt={`${model} image`} className={styles.carImage} fill={true}/>
             </div>
             <div className="h-full w-[60%] flex flex-row space-x-4 space-y-3">
-                <div className="w-[60%] h-full space-y-2 bg-gray-100 px-5 py-5">
+                <div className="w-[60%] h-full space-y-1 bg-gray-100 px-5 py-5">
+                 <div className={styles.carText}>Booker: {userName}</div>
                     <div className={styles.carText}>Model: {model}</div>
                     <div className={styles.carText}>Provider: {provider}</div>
                     <div className={styles.carText}>PricePerDay: {price}THB</div>
@@ -55,14 +59,14 @@ export default function CarCardHorizontal({
                     <div className={styles.carText}>Return Date: {returnDate}</div>
                 </div>
                 <div className="w-[40%] h-full px-10 py-5 space-y-10">
-                <Link href={`/Viewbooking/update/${carId}`}>
+                <Link href={`/Viewbooking/update/${bookingId}`}>
                 <button className="bg-white text-black-600 border text-2xl border-black border-800 font-semibold hover:bg-black hover:text-white hover:border-transparent px-10 py-5 rounded-2xl">
                      UPDATE
                 </button>
                 </Link>
 
                 <button className="bg-white text-black-600 border text-2xl border-black border-800 font-semibold hover:bg-black hover:text-white hover:border-transparent px-10 py-5 rounded-2xl"
-                onClick={(e)=>{e.preventDefault(); deleteUserBooking(token, carId); router.refresh();}} >
+                onClick={(e)=>{e.preventDefault(); deleteUserBooking(token, bookingId); }} >
                      DELETE
                 </button>
 

@@ -28,8 +28,8 @@ export default async function BookingList(){
                 </div>
                 :
                 carBookingListJson.data.map( (carBookingItem:CarBookingItem) => (
-                    <CarCardHorizontal model={carBookingItem.provider.car.model} provider={carBookingItem.provider.name} price={carBookingItem.provider.car.pricePerDay} imageURL={carBookingItem.provider.car.imageURL} carId={carBookingItem._id} 
-                    bookDate={carBookingItem.pickupDate} returnDate={carBookingItem.returnDate} token={token}/>
+                    <CarCardHorizontal model={carBookingItem.provider.car.model} provider={carBookingItem.provider.name} price={carBookingItem.provider.car.pricePerDay} imageURL={carBookingItem.provider.car.imageURL} bookingId={carBookingItem._id} 
+                     bookDate={carBookingItem.pickupDate} returnDate={carBookingItem.returnDate} token={token} userName={carBookingItem.user.name}/>
                 ))
             }
             

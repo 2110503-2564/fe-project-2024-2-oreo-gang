@@ -9,6 +9,7 @@ export default function View() {
       <div className={styles["text-wrapper-2"]}>Booking List</div>
       <BookingList/>
       <img className={styles.image} alt="Image" src="/img/view.jpg" />
+      <div className={styles.bottom}/>
     </div>
   );
 }

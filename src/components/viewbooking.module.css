@@ -22,3 +22,8 @@
     font-weight: 900;
     letter-spacing: 0;
 }
+
+.bottom {
+  width : 100vw;
+  height : 10vh;
+}
